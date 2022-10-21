@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 // utilisation du package Schema de mongoose pour crée le schema de l'objet 
 // création du type de donnée et de l'obligation pour chaques clés
-const thingSchema = mongoose.Schema ({
+const sauceSchema = mongoose.Schema ({
     userId: {type: String, required: true},
     name: {type: String, required: true},
     manufacturer: {type: String, required: true},
@@ -17,5 +17,5 @@ const thingSchema = mongoose.Schema ({
     usersDisliked: { type: [String], required: true}
 });
 
-// exportation du model thingSchema
-module.exports = mongoose.model("Thing", thingSchema);
+// exportation du model sauceSchema
+module.exports = mongoose.model("Sauce", sauceSchema);

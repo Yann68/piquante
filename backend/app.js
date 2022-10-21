@@ -40,7 +40,6 @@ app.use((req, res, next) => {
 // appel des routes utilisée dans l'application
 app.use("/api/sauces", saucesRoutes);
 app.use("/api/auth", userRoutes);
-//
 app.use("/images", express.static(path.join(__dirname, "images")));
 
 // exportation de app
