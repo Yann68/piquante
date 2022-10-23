@@ -12,11 +12,11 @@ const MIME_TYPES = {
 // on utilise multer.diskStorage pour enregistré sur le disque
 // on indique la destination pour l'enregistrement de l'image
 const storage = multer.diskStorage({
-  destination: ( callback ) => {
+  destination: ( req, file, callback ) => {
     callback(null, "images");
   },
   // création d'un nouveau nom de l'image 
-  filename: ( file, callback ) => {
+  filename: ( req,file, callback ) => {
     // on élimine les espaces du nom original de l'image
     const name = file.originalname.split(" ").join("_");
     // on crée le nouveau nom de l'image

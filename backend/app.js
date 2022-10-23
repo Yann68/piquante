@@ -23,7 +23,7 @@ const app = express();
 app.use(express.json());
 
 // connexion avec la base de donnée mangoAtlas
-mongoose.connect(`mongodb+srv://${process.env.MANGO_DB_USERNAME}:${process.env.MANGO_DB_PASSWORD}/?retryWrites=true&w=majority`,
+mongoose.connect(`mongodb+srv://${process.env.MANGO_DB_USERNAME}:${process.env.MANGO_DB_PASSWORD}.4w0tqkp.mongodb.net/?retryWrites=true&w=majority`,
   { useNewUrlParser: true,
     useUnifiedTopology: true })
   .then(() => console.log("Connexion à MongoDB réussie !"))

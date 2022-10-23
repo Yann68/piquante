@@ -83,7 +83,7 @@ exports.getOneSauce = (req, res) => {
 };
 
 // récupérer tous les objets dans la base de donnée 
-exports.getSauce = (res) => {
+exports.getSauce = (req, res) => {
     Sauce.find()
         .then(sauces => { res.status(200).json(sauces) })
         .catch(error => res.status(404).json({ error }));
