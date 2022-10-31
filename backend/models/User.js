@@ -6,7 +6,7 @@ const uniqueValidator = require("mongoose-unique-validator");
 
 // utilisation du package Schema de mongoose pour crée le schema de l'authentification
 const userSchema = mongoose.Schema({
-    email: { type: String, required: true, unique: true},
+    email: { type: String, required: true, unique: true },
     password: { type: String, required: true}
 });
 
